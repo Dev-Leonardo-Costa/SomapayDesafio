@@ -1,0 +1,47 @@
+package br.com.somapay.controller;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.zuptalents.desafio.domain.AplicacaoVacina;
+
+import br.com.somapay.models.CadastroEmpresa;
+
+@RestController
+@RequestMapping(path = "/cadastrarEmpresa")
+public class EmpresaController {
+	
+	@RequestMapping(value = "/{id}",method = RequestMethod.GET)
+	public ResponseEntity<CadastroEmpresa> find(@PathVariable Long id) {	
+		CadastroEmpresa obj = service.buscar(id);
+			
+	    return ResponseEntity.ok().body(obj);	
+	}
+	
+	@GetMapping
+	public String get() {
+		return "consultado";
+	}
+	
+	@PostMapping
+	public String post() {
+		return "cadastrado";
+	}
+	
+	@PutMapping
+	public String put() {
+		return "alterado";
+	}
+	
+	@DeleteMapping
+	public String delete() {
+		return "deletado";
+	}
+}

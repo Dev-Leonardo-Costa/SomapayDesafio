@@ -1,0 +1,27 @@
+package br.com.somapay.service;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import br.com.somapay.models.CadastroEmpresa;
+import br.com.somapay.repository.EmpresaRepository;
+
+@Service
+public class EmpresaService {
+	
+	@Autowired
+	private EmpresaRepository empresarepository;
+
+	public Optional<CadastroEmpresa> buscar(Long id) {
+	Optional<CadastroEmpresa> buscarPorId = empresarepository.findById(id);
+			return buscarPorId;		
+	}
+	
+	public CadastroEmpresa salvar(CadastroEmpresa cadastrodeempresa) {
+	empresarepository.save(cadastrodeempresa);
+			return cadastrodeempresa;	
+	}
+
+}

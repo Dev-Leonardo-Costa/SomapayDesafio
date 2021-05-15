@@ -1,0 +1,8 @@
+package resource.model;
+
+public class EmpresaResource {
+	
+	private String nome;
+	private Long id;
+
+}

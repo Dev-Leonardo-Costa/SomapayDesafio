@@ -1,0 +1,5 @@
+package br.com.somapay.repository;
+
+public class FuncinarioRepository {
+
+}

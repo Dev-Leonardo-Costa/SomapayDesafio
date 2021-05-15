@@ -1,0 +1,9 @@
+package br.com.somapay.repositorys;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import br.com.somapay.models.Empresa;
+
+public interface EmpresaRepository extends JpaRepository<Empresa, Long>{
+
+}

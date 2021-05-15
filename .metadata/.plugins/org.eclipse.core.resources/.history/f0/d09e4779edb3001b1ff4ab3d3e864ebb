@@ -1,0 +1,9 @@
+package br.com.somapay.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import br.com.somapay.models.CadastroFuncionario;
+
+public interface FuncinarioRepository  extends JpaRepository<CadastroFuncionario, Long>{
+
+}

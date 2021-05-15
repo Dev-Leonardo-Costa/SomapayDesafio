@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net,nz/thymeleaf/layout">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  <h1> Cadastro das Empresas</h1>
+   <form method="post">
+	  <label>Nome:</label>
+	  <input type ="text" id="fname" name="fname">
+	  
+	  <label>Local:</label><br>
+	  <input type="text" id="lname" name="lname">
+	  
+	  <label>Data:</label><br>
+	  <input type="text" id="lname" name="lname">
+	  
+	  <label>Horario:</label><br>
+	  <input type="text" id="lname" name="lname">
+	  
+	  <label >:</label><br>
+	  <input type="text" id="lname" name="lname">
+  </form>
+  </body>
+</html>

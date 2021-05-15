@@ -1,0 +1,18 @@
+package service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import dataresource.model.Empresa;
+import repository.EmpresaRepository;
+
+@Service
+public class CadastroEmpresa {
+
+	@Autowired
+	private EmpresaRepository empresaRepository;
+	
+	public void casdatro(Empresa empresa) {
+		empresaRepository.saveAndFlush(empresa);
+	}
+}

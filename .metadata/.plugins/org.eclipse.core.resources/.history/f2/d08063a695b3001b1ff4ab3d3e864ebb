@@ -1,0 +1,42 @@
+package br.com.somapay.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import br.com.somapay.models.CadastroFuncionario;
+import br.com.somapay.service.FuncionarioService;
+
+public class FuncionarioController {
+
+	@Autowired
+	private FuncionarioService service;
+	
+	@RequestMapping(value = "/{id}",method = RequestMethod.GET)
+	public ResponseEntity<CadastroFuncionario> find(@PathVariable Long id) {	
+		CadastroFuncionario obj = service.buscar(id);
+			
+	    return ResponseEntity.ok().body(obj);	
+	}
+	
+	@PostMapping
+	public CadastroFuncionario adicionar (@RequestBody CadastroFuncionario funcionario) {		
+		return service.save(funcionario);
+	}
+	
+	@PutMapping
+	public CadastroFuncionario alterar (@RequestBody CadastroFuncionario user) {		
+		return service.salvar(user);
+	}
+	
+	@DeleteMapping
+	public CadastroFuncionario excluir (@RequestBody CadastroFuncionario user) {		
+		return service.salvar(user);
+	}
+}

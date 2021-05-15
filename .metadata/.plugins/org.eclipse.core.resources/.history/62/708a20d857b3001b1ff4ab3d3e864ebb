@@ -1,0 +1,10 @@
+package br.com.somapay.models;
+
+public class Empresa {
+
+	private String nome;
+	private String local;
+	private String data;
+	private String horario;
+	private double contaCorente;
+}

@@ -1,0 +1,45 @@
+package br.com.somapay.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import br.com.somapay.models.CadastroEmpresa;
+import br.com.somapay.repository.EmpresaRepository;
+
+@RestController
+@RequestMapping(path = "/cadastrarEmpresa")
+public class EmpresaController {
+	
+	@Autowired
+	private EmpresaRepository empresaRepository;
+	
+
+	@GetMapping
+	public List<CadastroEmpresa> listar(){
+		return empresaRepository.findAll();
+	}
+	
+	@PostMapping
+	public CadastroEmpresa adicionar(@RequestBody CadastroEmpresa empresa) {
+		return empresaRepository.save(empresa);
+	}
+	
+	@DeleteMapping
+	public CadastroEmpresa excluir(@RequestBody CadastroEmpresa empresa) {
+		return empresaRepository.save(empresa);
+	}
+	
+	@PutMapping
+	public CadastroEmpresa alterar(@RequestBody CadastroEmpresa empresa) {
+		return empresaRepository.save(empresa);
+	}
+		
+}

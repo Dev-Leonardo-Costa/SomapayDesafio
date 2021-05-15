@@ -1,0 +1,16 @@
+package br.com.somapay.models;
+
+import java.util.Date;
+
+public class CadastroFuncionario {
+
+	private long id;
+	
+	private String nome;
+	private String cpf;
+	private Date data;
+	private String horario;
+	private double contaCorente;
+	
+	
+}

@@ -1,0 +1,29 @@
+1620847543461	Rename type 'Empresa'
+1620851116052	Encapsulate field 'id'
+1620851421864	Encapsulate field 'data'
+1620855585916	Rename resource 'Teladecadastro'
+1620855616392	Rename resource 'telascadastro'
+1620857761642	Delete element
+1620857766906	Delete element
+1620911722106	Rename package 'br.com.somapay.controller'
+1620911808882	Move compilation unit
+1620911814147	Move compilation unit
+1620911819655	Delete element
+1620911862875	Delete element
+1620911867704	Move compilation unit
+1620911871775	Move compilation unit
+1620911877590	Delete element
+1620912749992	Delete element
+1620912763050	Delete element
+1620913250587	Rename type 'buscarEmpresaServiceImpl'
+1620914248148	Rename type 'CadastroEmpresa'
+1620914269475	Rename type 'CadastroFuncionario'
+1620914607088	Encapsulate field 'data'
+1620915599113	Rename package 'br.com.somapay.models'
+1620915660368	Rename package 'br.com.somapay.controlles'
+1620915695937	Rename package 'br.com.somapay.repositorys'
+1620915724026	Rename package 'br.com.somapay.services'
+1620915752764	Delete element
+1620916145067	Rename package 'resource.models'
+1620916198561	Rename package 'resource.model'
+1620916240920	Rename package 'dataresource.model'

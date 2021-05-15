@@ -1,0 +1,14 @@
+package br.com.somapay.service;
+
+import java.util.List;
+
+import br.com.somapay.models.CadastroEmpresa;
+
+public interface PersonService {
+
+	 	void addPerson(CadastroEmpresa person);
+	    List<CadastroEmpresa> getAllPatients();
+	    CadastroEmpresa getPersonById(int id);
+	    void updatePersonCovidInfo(int id);
+	    void deletePersonById(int id);
+}

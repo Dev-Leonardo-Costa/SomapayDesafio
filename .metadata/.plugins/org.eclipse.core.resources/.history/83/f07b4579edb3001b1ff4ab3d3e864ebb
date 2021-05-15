@@ -1,0 +1,26 @@
+package br.com.somapay.service;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import br.com.somapay.models.CadastroFuncionario;
+import br.com.somapay.repository.FuncinarioRepository;
+
+@Service
+public class FuncionarioService {
+
+	@Autowired
+	private FuncinarioRepository funcionarioreposity;
+
+	public CadastroFuncionario buscar(Long id) {
+	Optional<CadastroFuncionario> buscarPorId = funcionarioreposity.findById(id);
+			return buscarPorId .orElse(null);		
+	}
+	
+	public CadastroFuncionario salvar(CadastroFuncionario cadastrodefuncionario) {
+	funcionarioreposity.save(cadastrodefuncionario);
+			return cadastrodefuncionario;	
+	}
+}

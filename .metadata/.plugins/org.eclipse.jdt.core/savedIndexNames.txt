@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+C:\Users\Elisane\OneDrive\Área de Trabalho\Somapay\.metadata\.plugins\org.eclipse.jdt.core
+2777625520.index
+1875030001.index

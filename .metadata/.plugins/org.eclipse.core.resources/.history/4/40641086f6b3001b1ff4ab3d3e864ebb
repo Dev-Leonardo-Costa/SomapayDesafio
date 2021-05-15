@@ -1,0 +1,18 @@
+package br.com.somapay.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import br.com.somapay.repositorys.EmpresaRepository;
+import resource.models.Empresa;
+
+@Service
+public class CadastroEmpresa {
+
+	@Autowired
+	private EmpresaRepository empresaRepository;
+	
+	public void casdatro(Empresa empresa) {
+		empresaRepository.saveAndFlush(empresa);
+	}
+}

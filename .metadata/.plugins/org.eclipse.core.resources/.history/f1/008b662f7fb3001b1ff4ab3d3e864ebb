@@ -1,0 +1,12 @@
+server.port=${port:8081}
+
+spring.datasource.url=jdbc:postgresql:mem:Empresas
+spring.datasource.username=postgres
+spring.datasource.password=banco
+
+spring.postgresql.console.enabled=true
+spring.postgresql.console.path=/postgresql
+
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+
